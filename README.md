@@ -130,5 +130,8 @@ npm run dev         # Run development server
 npm run build       # Build production bundle
 npm run lint        # Lint with ESLint
 ```
+👨‍💻 Author
+Built by @daveontrack
+Contributions and feedback welcome!
 
 
