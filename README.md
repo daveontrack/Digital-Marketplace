@@ -119,10 +119,4 @@ npm run build       # Build production bundle
 npm run lint        # Lint with ESLint
 ```
 
----
-
-## 🧑‍💻 Author
-
-**Dawit ([@daveontrack](https://github.com/daveontrack))**
-
 
