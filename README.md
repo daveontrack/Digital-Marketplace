@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Digital Marketplace
 
-## Getting Started
+A full-stack Digital Marketplace built with modern tools including **Next.js 14 (App Router)**, **Stripe Connect**, **Kinde** (Auth), **Prisma**, and **Supabase**. This platform allows users to buy, sell, and manage digital products with secure payments and user sessions.
 
-First, run the development server:
+---
+
+## 🧩 Tech Stack
+
+- ⚡ **Next.js 14** (App Router, Server Actions)
+- 🎨 **Tailwind CSS** for styling
+- 💳 **Stripe Connect** for seller onboarding and payments
+- 🔐 **Kinde** for authentication and user management
+- 🗃️ **Prisma** as the ORM
+- 🧾 **Supabase** (PostgreSQL) as the database
+- 🛠️ **TypeScript**, **ESLint**, **Prettier**
+
+---
+
+## 📁 Directory Structure
+
+```
+
+digital-marketplace/
+│
+├── app/                     # App directory (Next.js 14)
+│   ├── api/                 # Route handlers (API)
+│   ├── billing/             # Stripe billing routes
+│   ├── components/          # UI components
+│   ├── lib/                 # App-level utils and services
+│   ├── my-products/         # User product dashboard
+│   ├── payment/             # Payment flows
+│   ├── product/             # Product display page
+│   ├── products/            # All products list
+│   ├── return/              # Payment return handler
+│   ├── sell/                # Upload/sell product page
+│   ├── settings/            # User settings
+│   ├── layout.tsx          # App layout
+│   ├── page.tsx            # Home page
+│   └── globals.css         # Global styles
+│
+├── components/              # Shared components
+├── lib/                     # Prisma, Stripe, and helper functions
+├── prisma/                  # Prisma schema & migrations
+├── public/                  # Public assets (images, favicon)
+│
+├── .env                     # Environment variables
+├── .gitignore               # Ignored files for Git
+├── next.config.ts           # Next.js config
+├── package.json             # Project dependencies and scripts
+├── tailwind.config.ts       # Tailwind CSS configuration
+└── tsconfig.json            # TypeScript configuration
+
+````
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/daveontrack/Digital-Marketplace.git
+cd Digital-Marketplace
+````
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Set Up Environment Variables
+
+Create a `.env` file and add the required keys:
+
+```env
+DATABASE_URL=postgresql://<user>:<password>@<host>:5432/<db>
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+KINDE_ISSUER_URL=...
+KINDE_CLIENT_ID=...
+KINDE_CLIENT_SECRET=...
+KINDE_REDIRECT_URI=http://localhost:3000/api/auth/callback
+```
+
+### 4. Push Prisma Schema to Supabase
+
+```bash
+npx prisma db push
+```
+
+### 5. Run the Dev Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Features
 
-## Learn More
+* Seller onboarding via Stripe Connect
+* Auth with Kinde
+* Buy/sell digital products
+* Product dashboard (CRUD)
+* Secure checkout flow
+* Server Actions & API routes with Next.js App Router
+* Post-purchase download access
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run dev         # Run development server
+npm run build       # Build production bundle
+npm run lint        # Lint with ESLint
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧑‍💻 Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Dawit ([@daveontrack](https://github.com/daveontrack))**
+
+
