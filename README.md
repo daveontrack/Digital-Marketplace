@@ -74,13 +74,25 @@ npm install
 Create a `.env` file and add the required keys:
 
 ```env
-DATABASE_URL=postgresql://<user>:<password>@<host>:5432/<db>
-STRIPE_SECRET_KEY=sk_test_...
-STRIPE_WEBHOOK_SECRET=whsec_...
-KINDE_ISSUER_URL=...
-KINDE_CLIENT_ID=...
-KINDE_CLIENT_SECRET=...
-KINDE_REDIRECT_URI=http://localhost:3000/api/auth/callback
+# 🗄️ Supabase Database
+DATABASE_URL=
+DIRECT_URL=
+
+# 💳 Stripe
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+STRIPE_CONNECT_WEBHOOK_SECRET=
+
+# 🔐 Kinde Authentication
+KINDE_ISSUER_URL=
+KINDE_CLIENT_ID=
+KINDE_CLIENT_SECRET=
+KINDE_REDIRECT_URI=
+
+# ☁️ UploadThing
+UPLOADTHING_TOKEN=
+UPLOADTHING_API=
+
 ```
 
 ### 4. Push Prisma Schema to Supabase
