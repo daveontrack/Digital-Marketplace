@@ -122,7 +122,6 @@ Visit `http://localhost:3000`
 * Post-purchase download access
 
 ---
-👨‍💻 Author
 Built by @daveontrack
 Contributions and feedback welcome!
 
